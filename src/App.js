@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement } from './actions';
+import { connect } from 'react-redux';
 
 function App() {
   const counter = useSelector(state => state.counter);
@@ -18,3 +19,4 @@ function App() {
 }
 
 export default App;
+//export default connect()(App);
