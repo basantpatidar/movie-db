@@ -8,3 +8,10 @@ export const decrement = () => {
     type: 'DECREMENT'
   };
 };
+
+export const searchInput = term => {
+  return {
+    type: 'SEARCH_INPUT',
+    payload: term
+  };
+};
