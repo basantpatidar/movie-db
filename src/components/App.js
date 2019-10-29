@@ -1,12 +1,11 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+// import { useSelector} from 'react-redux';
 // import { increment, decrement } from '../actions';
 import { connect } from 'react-redux';
 
 function App() {
-  const counter = useSelector(state => state.counter);
-  const logged = useSelector(state => state.logged);
-  const dispatch = useDispatch();
+  // const counter = useSelector(state => state.counter);
+  // const logged = useSelector(state => state.logged);
   return (
     <div className="App">
       <header className="App-header"> Counter {counter} </header>
