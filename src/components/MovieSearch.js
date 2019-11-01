@@ -5,6 +5,7 @@ class MovieSearch extends React.Component {
     return (
       <div>
         <input type="text" name="MovieName"></input>
+        <button>Submit</button>
         <SelectedMovie />
       </div>
     );
