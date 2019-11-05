@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { async } from 'q';
 // export const increment = () => {
 //   return {
 //     type: 'INCREMENT'
@@ -11,22 +12,22 @@ import axios from 'axios';
 // };
 
 // action creator for controlled form
-export const searchInput = term => {
-  return {
+export const searchInput = term => async dispatch => {
+  dispatch({
     type: 'SEARCH_INPUT',
     payload: term
-  };
+  });
 };
 
 //action creator for searchBar
-export const searchTerm = term => {
-  axios.get('http://www.omdbapi.com/', {
+export const searchTerm = term => async dispatch => {
+  const res = axios.get('http://www.omdbapi.com/', {
     params: { s: term, apikey: process.env.development }
   });
-  return {
+  dispatch({
     type: 'SEARCH_TERM',
     payload: term
-  };
+  });
 };
 
 //next action creator below
