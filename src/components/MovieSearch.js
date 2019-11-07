@@ -1,6 +1,6 @@
 import React from 'react';
 import SelectedMovie from './SelectedMovie';
-import * as actions from '../action';
+import * as actions from '../actions';
 import { connect } from 'react-redux';
 class MovieSearch extends React.Component {
   render() {
@@ -13,6 +13,9 @@ class MovieSearch extends React.Component {
     );
   }
 }
+const mapStateToProps = state => {
+  return { term: state.searchTerm };
+};
 export default connect(
   null,
   actions
