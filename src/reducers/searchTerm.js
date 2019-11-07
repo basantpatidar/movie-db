@@ -1,5 +1,5 @@
-const searchTermReducer = (state = '', action) => {
+const controlledSearchReducer = (state = '', action) => {
   return action.payload;
 };
 
-export default searchTermReducer;
+export default controlledSearchReducer;
