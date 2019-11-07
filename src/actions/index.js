@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { async } from 'q';
 // export const increment = () => {
 //   return {
 //     type: 'INCREMENT'
@@ -21,12 +20,12 @@ export const searchInput = term => async dispatch => {
 
 //action creator for searchBar
 export const searchTerm = term => async dispatch => {
-  const res = axios.get('http://www.omdbapi.com/', {
+  const res = await axios.get('http://www.omdbapi.com/', {
     params: { s: term, apikey: process.env.development }
   });
   dispatch({
     type: 'SEARCH_TERM',
-    payload: term
+    payload: res
   });
 };
 
