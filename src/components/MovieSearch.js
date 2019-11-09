@@ -17,6 +17,6 @@ const mapStateToProps = state => {
   return { term: state.searchTerm };
 };
 export default connect(
-  null,
+  mapStateToProps,
   actions
 )(MovieSearch);
