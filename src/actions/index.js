@@ -11,7 +11,7 @@ import axios from 'axios';
 // };
 
 // action creator for controlled form
-export const searchInput = term => async dispatch => {
+export const searchInput = term => dispatch => {
   dispatch({
     type: 'SEARCH_INPUT',
     payload: term
