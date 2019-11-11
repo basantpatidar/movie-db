@@ -1,14 +1,4 @@
 import axios from 'axios';
-// export const increment = () => {
-//   return {
-//     type: 'INCREMENT'
-//   };
-// };
-// export const decrement = () => {
-//   return {
-//     type: 'DECREMENT'
-//   };
-// };
 
 // action creator for controlled form
 export const searchInput = term => dispatch => {
