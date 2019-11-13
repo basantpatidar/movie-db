@@ -14,6 +14,8 @@ class MovieSearch extends React.Component {
   }
 }
 const mapStateToProps = state => {
+  console.log(state);
+
   return { term: state.searchTerm };
 };
 export default connect(
