@@ -10,7 +10,7 @@ class MovieSearch extends React.Component {
       <div>
         <input type="text" name="MovieName"></input>
         <button>Submit</button>
-        <SelectedMovie />
+        <SelectedMovie actionProps={actions} />
       </div>
     );
   }
