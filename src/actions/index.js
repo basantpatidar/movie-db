@@ -14,6 +14,8 @@ export const searchTerm = term => async dispatch => {
   const res = await axios.get('http://www.omdbapi.com/', {
     params: { s: term, apikey: process.env.development }
   });
+  console.log(res);
+
   dispatch({
     type: 'SEARCH_TERM',
     payload: res
