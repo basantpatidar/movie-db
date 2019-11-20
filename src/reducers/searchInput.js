@@ -1,4 +1,4 @@
-const searchReducer = (state = '', action) => {
+const searchReducer = (state = 'No Name', action) => {
   return action.payload;
 };
 
